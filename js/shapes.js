@@ -20,6 +20,11 @@ window.onload = function() {
 // equivalent set of six event listeners for your solutions. the first one is done for you.
 
         document.getElementById("hello").onclick = sayHello;
+        document.getElementById("rectangle").onclick = drawRectangle;
+        document.getElementById("colored-rectangle").onclick = drawColoredRectangle;
+        document.getElementById("triangle").onclick = drawTriangle;
+        document.getElementById("smile").onclick = drawFace;
+        document.getElementById("pyramid").onclick = drawPyramid;
 
 };
 
@@ -28,7 +33,19 @@ window.onload = function() {
  */
 
 const sayHello = function() {
-    // write your exercise 1 code here
+
+        do {
+
+                let MIN_LENGTH = 1;
+                let MAX_LENGTH = 50;
+
+                let message = String(window.prompt("Enter your message."));
+                let messageLength = message.length;
+
+        } while (messageLength > MAX_LENGTH || messageLength < MIN_LENGTH);
+
+        window.alert(message);
+
 };
 
 /*
@@ -68,5 +85,5 @@ const drawFace = function() {
  */
 
 const drawPyramid = function() {
-    // write your exercise 5 code here
+    // write your exercise 6 code here
 };
