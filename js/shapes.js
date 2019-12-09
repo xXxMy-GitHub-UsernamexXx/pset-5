@@ -1,5 +1,4 @@
 window.onload = function() {
-
         document.getElementById("hello-sample").onclick = sayHelloStaff;
         document.getElementById("rectangle-sample").onclick = drawRectangleStaff;
         document.getElementById("colored-rectangle-sample").onclick = drawColoredRectangleStaff;
@@ -20,11 +19,11 @@ window.onload = function() {
 // equivalent set of six event listeners for your solutions. the first one is done for you.
 
         document.getElementById("hello").onclick = sayHello;
-        document.getElementById("rectangle").onclick = drawRectangle;
-        document.getElementById("colored-rectangle").onclick = drawColoredRectangle;
-        document.getElementById("triangle").onclick = drawTriangle;
-        document.getElementById("smile").onclick = drawFace;
-        document.getElementById("pyramid").onclick = drawPyramid;
+        // document.getElementById("rectangle").onclick = drawRectangle;
+        // document.getElementById("colored-rectangle").onclick = drawColoredRectangle;
+        // document.getElementById("triangle").onclick = drawTriangle;
+        // document.getElementById("smile").onclick = drawFace;
+        // document.getElementById("pyramid").onclick = drawPyramid;
 
 };
 
@@ -33,18 +32,25 @@ window.onload = function() {
  */
 
 const sayHello = function() {
+        const ctx = document.getElementById('student-canvas-1').getContext('2d');
+
+        const MAX_LENGTH = 50;
+        let message;
 
         do {
+                message = window.prompt("Enter your message.");
 
-                let MIN_LENGTH = 1;
-                let MAX_LENGTH = 50;
+        } while (message !== null && message.length > MAX_LENGTH);
 
-                let message = String(window.prompt("Enter your message."));
-                let messageLength = message.length;
+        if (message == null) {
+                ctx.clearRect(0, 0, 1024, 128);
 
-        } while (messageLength > MAX_LENGTH || messageLength < MIN_LENGTH);
+        } else {
+                ctx.clearRect(0, 0, 1024, 128);
+                ctx.font = '48px sans-serif';
+                ctx.strokeText(message, 30, 70);
 
-        window.alert(message);
+        };
 
 };
 
