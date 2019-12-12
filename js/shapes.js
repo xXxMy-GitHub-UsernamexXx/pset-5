@@ -90,6 +90,15 @@ const drawRectangle = function() {
         } while (height !== null &&
         (height < MIN_LENGTH || height > MAX_HEIGHT - y));
 
+        if (((x || y) || (width || height)) == null) {
+                ctx.clearRect(0, 0, 1024, 512);
+
+        } else {
+                ctx.clearRect(0, 0, 1024, 512);
+                ctx.strokeRect(x, y, width, height);
+
+        };
+
 };
 
 /*
