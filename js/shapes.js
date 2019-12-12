@@ -19,7 +19,7 @@ window.onload = function() {
 // equivalent set of six event listeners for your solutions. the first one is done for you.
 
         document.getElementById("hello").onclick = sayHello;
-        // document.getElementById("rectangle").onclick = drawRectangle;
+        document.getElementById("rectangle").onclick = drawRectangle;
         // document.getElementById("colored-rectangle").onclick = drawColoredRectangle;
         // document.getElementById("triangle").onclick = drawTriangle;
         // document.getElementById("smile").onclick = drawFace;
@@ -59,7 +59,33 @@ const sayHello = function() {
  */
 
 const drawRectangle = function() {
-    // write your exercise 2 code here
+        const ctx = document.getElementById('student-canvas-2').getContext('2d');
+
+        const MIN_LENGTH = 1;
+        const MAX_HEIGHT = 512;
+        const MAX_WIDTH = 1024;
+        let x;
+        let y;
+        let width;
+        let height;
+
+        do {
+                x = window.prompt("Enter the x-coordinate.");
+
+        } while (x !== null &&
+        (x < MIN_LENGTH || x > MAX_WIDTH - 1));
+        do {
+                y = window.prompt("Enter the y-coordinate.");
+
+        } while (y !== null &&
+        (y < MIN_LENGTH || y > MAX_HEIGHT - 1));
+        do {
+                width = window.prompt("Enter the width.");
+
+        } while (width !== null &&
+        (width < MIN_LENGTH || width > MAX_WIDTH - x));
+        
+
 };
 
 /*
