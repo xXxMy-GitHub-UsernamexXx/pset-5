@@ -84,7 +84,11 @@ const drawRectangle = function() {
 
         } while (width !== null &&
         (width < MIN_LENGTH || width > MAX_WIDTH - x));
-        
+        do {
+                height = window.prompt("Enter the width.");
+
+        } while (height !== null &&
+        (height < MIN_LENGTH || height > MAX_HEIGHT - y));
 
 };
 
