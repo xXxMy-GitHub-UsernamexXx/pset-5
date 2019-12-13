@@ -230,10 +230,10 @@ const drawTriangle = function() {
 
                 };
 
-        } while ((Math.hypot(height, base) !== hypotenuse
-                && height !== null)
-                && (base !== null
-                && hypotenuse !== null));
+        } while ((base !== null
+                && hypotenuse !== null)
+                && (height !== null
+                && Math.hypot(height, base) !== hypotenuse));
 
         if (height == null) {
                 ctx.clearRect(0, 0, 1024, 512);
