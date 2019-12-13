@@ -20,7 +20,7 @@ window.onload = function() {
 
         document.getElementById("hello").onclick = sayHello;
         document.getElementById("rectangle").onclick = drawRectangle;
-        // document.getElementById("colored-rectangle").onclick = drawColoredRectangle;
+        document.getElementById("colored-rectangle").onclick = drawColoredRectangle;
         // document.getElementById("triangle").onclick = drawTriangle;
         // document.getElementById("smile").onclick = drawFace;
         // document.getElementById("pyramid").onclick = drawPyramid;
@@ -115,7 +115,63 @@ const drawRectangle = function() {
  */
 
 const drawColoredRectangle = function() {
-    // write your exercise 3 code here
+        const ctx = document.getElementById('student-canvas-3').getContext('2d');
+
+        let color;
+        let colorInLower;
+        let acceptedColor;
+
+        do {
+                color = window.prompt("Enter a color.");
+                colorInLower = color.toLowerCase();
+
+                switch (colorInLower) {
+                        case "black":
+                                acceptedColor = true;
+                                break;
+
+                        case "blue":
+                                acceptedColor = true;
+                                break;
+
+                        case "green":
+                                acceptedColor = true;
+                                break;
+
+                        case "orange":
+                                acceptedColor = true;
+                                break;
+
+                        case "purple":
+                                acceptedColor = true;
+                                break;
+
+                        case "red":
+                                acceptedColor = true;
+                                break;
+
+                        case "yellow":
+                                acceptedColor = true;
+                                break;
+
+                        default:
+                                acceptedColor = false;
+                                break;
+
+                };
+
+        } while (color !== null && acceptedColor == false);
+
+
+        if (color == null) {
+                ctx.clearRect(0, 0, 1024, 128);
+
+        } else {
+                ctx.clearRect(0, 0, 1024, 128);
+                ctx.fillStyle = colorInLower;
+                ctx.fillRect(10, 10, 100, 50);
+
+        };
 };
 
 /*
