@@ -183,7 +183,7 @@ const drawColoredRectangle = function() {
  */
 
 const drawTriangle = function() {
-        const ctx = document.getElementById('student-canvas-3').getContext('2d');
+        const ctx = document.getElementById('student-canvas-4').getContext('2d');
 
         let height;
         let base;
