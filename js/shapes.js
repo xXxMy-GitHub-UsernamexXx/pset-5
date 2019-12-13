@@ -21,7 +21,7 @@ window.onload = function() {
         document.getElementById("hello").onclick = sayHello;
         document.getElementById("rectangle").onclick = drawRectangle;
         document.getElementById("colored-rectangle").onclick = drawColoredRectangle;
-        // document.getElementById("triangle").onclick = drawTriangle;
+        document.getElementById("triangle").onclick = drawTriangle;
         // document.getElementById("smile").onclick = drawFace;
         // document.getElementById("pyramid").onclick = drawPyramid;
 
@@ -183,7 +183,77 @@ const drawColoredRectangle = function() {
  */
 
 const drawTriangle = function() {
-    // write your exercise 4 code here
+        const ctx = document.getElementById('student-canvas-3').getContext('2d');
+
+        let height;
+        let base;
+        let hypotenuse;
+        const MAX_HEIGHT = 487;
+        const MAX_BASE = 999;
+        const MIN_LENGTH = 1;
+
+        do {
+                do {
+                        height = window.prompt("Enter the height.");
+                        if (height !== null) {
+                                height = Number(height);
+
+                        };
+
+                } while ((height !== null
+                        && isNaN(height))
+                        && (height > MAX_HEIGHT
+                        && height < MIN_LENGTH));
+                if (height !== null) {
+                        do {
+                                base = window.prompt("Enter the base.");
+                                if (base !== null) {
+                                        base = Number(base);
+
+                                };
+
+                        } while ((base !== null
+                                && isNaN(base))
+                                && (base > MAX_BASE
+                                && base < MIN_LENGTH));
+
+                };
+                if (height !== null && base !== null) {
+                        do {
+                                hypotenuse = window.prompt("Enter the hypotenuse.");
+                                if (hypotenuse !== null) {
+                                        hypotenuse = Number(hypotenuse);
+
+                                };
+
+                        } while (hypotenuse !== null && isNaN(hypotenuse));
+
+                };
+
+        } while ((Math.hypot(height, base) !== hypotenuse
+                && height !== null)
+                && (base !== null
+                && hypotenuse !== null));
+
+        if (height == null) {
+                ctx.clearRect(0, 0, 1024, 512);
+
+        } else if (base == null) {
+                ctx.clearRect(0, 0, 1024, 512);
+
+        } else if (hypotenuse == null) {
+                ctx.clearRect(0, 0, 1024, 512);
+
+        } else {
+                ctx.clearRect(0, 0, 1024, 512);
+                ctx.beginPath();
+                ctx.moveTo(25, 25);
+                ctx.lineTo(25 + height, 25);
+                ctx.lineTo(25 + height, 25 + base);
+                ctx.stroke();
+
+        };
+
 };
 
 /*
