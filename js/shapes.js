@@ -248,8 +248,9 @@ const drawTriangle = function() {
                 ctx.clearRect(0, 0, 1024, 512);
                 ctx.beginPath();
                 ctx.moveTo(25, 25);
-                ctx.lineTo(25 + height, 25);
+                ctx.lineTo(25, 25 + base);
                 ctx.lineTo(25 + height, 25 + base);
+                ctx.lineTo(25, 25);
                 ctx.stroke();
 
         };
