@@ -201,10 +201,9 @@ const drawTriangle = function() {
                         };
 
                 } while ((height !== null
-                        && isNaN(height))
                         && (height > MAX_HEIGHT
                         && height < MIN_LENGTH));
-                if (height !== null) {
+                if (height !== null && height !== NaN) {
                         do {
                                 base = window.prompt("Enter the base.");
                                 if (base !== null) {
@@ -213,12 +212,14 @@ const drawTriangle = function() {
                                 };
 
                         } while ((base !== null
-                                && isNaN(base))
                                 && (base > MAX_BASE
                                 && base < MIN_LENGTH));
 
                 };
-                if (height !== null && base !== null) {
+                if ((height !== null
+                   && base !== null)
+                   && (height !== NaN
+                   && base !== NaN)) {
                         do {
                                 hypotenuse = window.prompt("Enter the hypotenuse.");
                                 if (hypotenuse !== null) {
@@ -226,7 +227,7 @@ const drawTriangle = function() {
 
                                 };
 
-                        } while (hypotenuse !== null && isNaN(hypotenuse));
+                        } while (hypotenuse !== null);
 
                 };
 
@@ -234,7 +235,7 @@ const drawTriangle = function() {
                 && hypotenuse !== null)
                 && (height !== null
                 && Math.hypot(height, base) !== hypotenuse));
-
+//add NaN to "illegal values"
         if (height == null) {
                 ctx.clearRect(0, 0, 1024, 512);
 
