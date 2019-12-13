@@ -113,7 +113,7 @@ const drawRectangle = function() {
 /*
  * Exercise 3.
  */
-
+colorInLower = color.toLowerCase();
 const drawColoredRectangle = function() {
         const ctx = document.getElementById('student-canvas-3').getContext('2d');
 
@@ -123,7 +123,10 @@ const drawColoredRectangle = function() {
 
         do {
                 color = window.prompt("Enter a color.");
-                colorInLower = color.toLowerCase();
+                if (color !== null) {
+                        colorInLower = color.toLowerCase();
+
+                };
 
                 switch (colorInLower) {
                         case "black":
