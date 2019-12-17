@@ -214,7 +214,7 @@ const drawTriangle = function() {
 
                         } while ((base !== null
                                 && (base > MAX_BASE
-                                && base < MIN_LENGTH));
+                                && base < MIN_LENGTH)));
 
                 };
 
