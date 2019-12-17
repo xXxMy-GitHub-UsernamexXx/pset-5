@@ -229,7 +229,7 @@ const drawTriangle = function() {
 
                                 };
 
-                        } while (hypotenuse !== null);
+                        } while (hypotenuse !== null && hypotenuse < MIN_LENGTH);
 
                 };
 
