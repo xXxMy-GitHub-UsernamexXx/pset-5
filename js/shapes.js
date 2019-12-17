@@ -231,11 +231,14 @@ const drawTriangle = function() {
 
                 };
 
-        } while ((base !== null
+        } while (((base !== null
                 && hypotenuse !== null)
                 && (height !== null
-                && Math.hypot(height, base) !== hypotenuse));
-//add NaN to "illegal values"
+                && Math.hypot(height, base) !== hypotenuse))
+                &&((base === NaN
+                && hypotenuse === NaN)
+                && height === NaN));
+
         if (height == null) {
                 ctx.clearRect(0, 0, 1024, 512);
 
