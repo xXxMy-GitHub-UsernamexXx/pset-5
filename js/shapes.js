@@ -202,7 +202,7 @@ const drawTriangle = function() {
 
                 } while ((height !== null
                         && (height > MAX_HEIGHT
-                        && height < MIN_LENGTH))
+                        && height < MIN_LENGTH));
 
                 if (height !== null && height !== NaN) {
                         do {
