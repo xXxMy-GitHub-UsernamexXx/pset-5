@@ -202,7 +202,8 @@ const drawTriangle = function() {
 
                 } while ((height !== null
                         && (height > MAX_HEIGHT
-                        && height < MIN_LENGTH));
+                        && height < MIN_LENGTH))
+
                 if (height !== null && height !== NaN) {
                         do {
                                 base = window.prompt("Enter the base.");
@@ -216,6 +217,7 @@ const drawTriangle = function() {
                                 && base < MIN_LENGTH));
 
                 };
+
                 if ((height !== null
                    && base !== null)
                    && (height !== NaN
